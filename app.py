@@ -18,7 +18,7 @@ def upload_file():
         if not file:
             return
         img_bytes = file.read()
-        class_name ,class_id = get_prediction(image_bytes=img_bytes)
+        class_name, class_id = get_prediction(image_bytes=img_bytes)
         return render_template('result.html', class_id=class_id,
                                class_name=class_name)
     return render_template('index.html')
